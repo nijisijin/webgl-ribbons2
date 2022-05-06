@@ -2,9 +2,11 @@
   "name": "webgl-ribbons2",
   "version": "1.0.0",
   "description": "",
-  "default": "dist/index.html",
+  "default": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "dev": "parcel index.html",
     "build": "parcel build index.html"
   },
   "author": "",
