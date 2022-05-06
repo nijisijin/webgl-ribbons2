@@ -2,7 +2,7 @@
   "name": "webgl-ribbons2",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build index.html"
@@ -13,7 +13,6 @@
     "last 1 chrome versions"
   ],
   "dependencies": {
-    "@parcel/transformer-glsl": "^2.5.0",
     "three": "^0.140.0"
   },
   "devDependencies": {
