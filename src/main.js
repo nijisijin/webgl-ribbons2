@@ -143,7 +143,7 @@ export default class Sketch{
 
 
 
-		    this.mesh = new THREE.Mesh( this.geometry, this.material);
+		this.mesh = new THREE.Mesh( this.geometry, this.material);
         this.mesh2 = new THREE.Mesh( this.geometry2, this.material2);
         this.mesh3 = new THREE.Mesh( this.geometry3, this.material3);
         this.mesh4 = new THREE.Mesh( this.geometry4, this.material4);
@@ -165,21 +165,19 @@ export default class Sketch{
         this.material4.uniforms.time.value = this.time;
         
 		this.mesh.position.y = 1;
-        this.mesh.rotation.x = this.time * 2;
-        this.mesh.rotation.y = this.time * 2;
-
-        this.mesh.rotation.x = this.clock.getElapsedTime() * 0.12;
-        this.mesh2.rotation.x = this.clock.getElapsedTime() * 0.08;
-        this.mesh3.rotation.x = this.clock.getElapsedTime() * 0.12;
+        this.mesh.rotation.x = this.time * 0.26;
+        this.mesh.rotation.y = this.time * 0.3;
+        
+        this.mesh2.rotation.x = this.clock.getElapsedTime() * 0.2;
         
         this.mesh3.position.y = -0.7;
-        this.mesh3.rotation.x = this.time * 3;
-        this.mesh3.rotation.y = this.time * 3;
+        this.mesh3.rotation.x = this.time * 1;
+        this.mesh3.rotation.y = this.time * 0.3;
 
         this.mesh4.scale.set(2,2,2);
         this.mesh4.position.z = -0.4;
         this.mesh4.position.y = 1.3;
-        this.mesh4.rotation.x = 1.5;
+
 
 		// this.mesh.rotation.x = this.time * 0.5
 		// this.mesh.rotation.x = 10;

@@ -37968,18 +37968,15 @@ class Sketch {
     this.material3.uniforms.uTime.value = this.clock.getElapsedTime();
     this.material4.uniforms.time.value = this.time;
     this.mesh.position.y = 1;
-    this.mesh.rotation.x = this.time * 2;
-    this.mesh.rotation.y = this.time * 2;
-    this.mesh.rotation.x = this.clock.getElapsedTime() * 0.12;
-    this.mesh2.rotation.x = this.clock.getElapsedTime() * 0.08;
-    this.mesh3.rotation.x = this.clock.getElapsedTime() * 0.12;
+    this.mesh.rotation.x = this.time * 0.26;
+    this.mesh.rotation.y = this.time * 0.3;
+    this.mesh2.rotation.x = this.clock.getElapsedTime() * 0.2;
     this.mesh3.position.y = -0.7;
-    this.mesh3.rotation.x = this.time * 3;
-    this.mesh3.rotation.y = this.time * 3;
+    this.mesh3.rotation.x = this.time * 1;
+    this.mesh3.rotation.y = this.time * 0.3;
     this.mesh4.scale.set(2, 2, 2);
     this.mesh4.position.z = -0.4;
-    this.mesh4.position.y = 1.3;
-    this.mesh4.rotation.x = 1.5; // this.mesh.rotation.x = this.time * 0.5
+    this.mesh4.position.y = 1.3; // this.mesh.rotation.x = this.time * 0.5
     // this.mesh.rotation.x = 10;
     // this.mesh.rotation.y = this.time / 1000;
 
@@ -38021,7 +38018,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60235" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64881" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
