@@ -29,7 +29,7 @@ export default class Sketch{
 		this.height = this.container.offsetHeight;
 
 		this.camera = new THREE.PerspectiveCamera( 70, this.width/this.height, 0.01, 10 );
-		this.camera.position.z = 2;
+		this.camera.position.z = 2.3;
         this.camera.position.y = -1.7;
 
 		
@@ -45,7 +45,7 @@ export default class Sketch{
 		this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 		
 		this.time = 0;
-        this.clock = new THREE.Clock();
+    this.clock = new THREE.Clock();
         
 		this.resize();
 		this.addObjects();
@@ -81,7 +81,7 @@ export default class Sketch{
 
 
 	addObjects(){
-    this.geometry4 = new THREE.SphereBufferGeometry(2.5,32,32);
+    this.geometry4 = new THREE.SphereBufferGeometry(2.9,32,32);
 
     // this.geometry4 = new THREE.CylinderGeometry(15, 0, 0.8, 60, 60, true,);
     this.geometry3 = new THREE.CylinderGeometry(0.5, 0.5, 0.3, 3, 60, true);
@@ -143,7 +143,7 @@ export default class Sketch{
 
 
 
-		this.mesh = new THREE.Mesh( this.geometry, this.material);
+		    this.mesh = new THREE.Mesh( this.geometry, this.material);
         this.mesh2 = new THREE.Mesh( this.geometry2, this.material2);
         this.mesh3 = new THREE.Mesh( this.geometry3, this.material3);
         this.mesh4 = new THREE.Mesh( this.geometry4, this.material4);
@@ -168,14 +168,16 @@ export default class Sketch{
         this.mesh.rotation.x = this.time * 2;
         this.mesh.rotation.y = this.time * 2;
 
-        this.mesh2.rotation.x = this.clock.getElapsedTime() * 0.5;
+        this.mesh.rotation.x = this.clock.getElapsedTime() * 0.12;
+        this.mesh2.rotation.x = this.clock.getElapsedTime() * 0.08;
+        this.mesh3.rotation.x = this.clock.getElapsedTime() * 0.12;
         
         this.mesh3.position.y = -0.7;
         this.mesh3.rotation.x = this.time * 3;
         this.mesh3.rotation.y = this.time * 3;
 
         this.mesh4.scale.set(2,2,2);
-        this.mesh4.position.z = -2;
+        this.mesh4.position.z = -0.4;
         this.mesh4.position.y = 1.3;
         this.mesh4.rotation.x = 1.5;
 
