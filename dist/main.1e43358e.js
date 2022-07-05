@@ -37849,13 +37849,6 @@ class Sketch {
     this.addObjects();
     this.render();
     this.setupResize();
-    this.addLights();
-  }
-
-  addLights() {
-    this.scene.add(new THREE.AmbientLight(0xffffff, 0.8));
-    let dirLight = new THREE.DirectionalLight(0xffffff, 0);
-    dirLight.position.set(-30, -10, -10); // this.scene.add(dirLight)
   }
 
   resize() {
@@ -38018,7 +38011,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64881" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50320" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

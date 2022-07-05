@@ -51,18 +51,9 @@ export default class Sketch{
 		this.addObjects();
 		this.render();
 		this.setupResize();
-        this.addLights();
     
 	}
 
-    addLights(){
-        this.scene.add(new THREE.AmbientLight(0xffffff,0.8))
-
-        let dirLight = new THREE.DirectionalLight(0xffffff,0)
-        dirLight.position.set(-30,-10,-10)
-        // this.scene.add(dirLight)
-
-    }
 
 
     
